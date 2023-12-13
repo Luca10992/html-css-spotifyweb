@@ -1,13 +1,87 @@
-/* GENERICS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/***********************
+        GENERICS 
+ ***********************/
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.conteiner{
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 15px;
+/* ********* CUSTOM PROPS */
+
+:root {
+    --aside-color: #000000;
+    --main-color: #141922;
+    --player-color: #282828;
+    --text-color: white;
+    --subtitle-color: #7B7D82;
+    --border-color: #ADFF2F;
+    --trasparent-color: rgb(0, 0, 0, 0.7);
+}
+
+/*******************************
+MAIN
+*********************************/
+
+#main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.aside_bar {
+    width: 230px;
+    flex-shrink: 0;
+    background-color: var(--aside-color);
+}
+
+.main_menu {
+    flex-grow: 1;
+    background-color: var(--main-color);
+    overflow: auto;
+}
+
+.trasparent_bar {
+    height: 100px;
+    background-color: var(--trasparent-color);
+    position: sticky;
+    top: 0;
+    text-align: end;
+    line-height: 100px;
+}
+
+.btn {
+    margin-right: 5px;
+    background-color: transparent;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.content_menu {
+    height: calc(100% - 80px);
+    color: var(--subtitle-color);
+}
+
+/********************************
+FOOTER
+********************************* */
+
+#footer {
+    height: 80px;
+    background-color: var(--player-color);
+}
+
+/*********************************
+MOBILE
+**********************************/
+
+@media screen and (max-width: 552px) {
+    .aside_bar {
+        width: 50px;
+    }
 }
