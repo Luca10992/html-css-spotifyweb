@@ -102,6 +102,11 @@ MAIN
     padding-bottom: 1rem;
 }
 
+.aside_options .home {
+    border-left: 3px solid var(--border-color);
+    color: white;
+}
+
 .create:hover {
     cursor: pointer;
     color: white;
@@ -111,7 +116,7 @@ MAIN
     font-size: 40px;
 }
 
-.playlist {
+.name_playlist {
     font-size: 13px;
     line-height: 2rem;
 }
@@ -173,8 +178,83 @@ hr {
 }
 
 .content_menu {
+    padding: 1rem;
     height: calc(100% - 80px);
     color: var(--subtitle-color);
+}
+
+.sections_bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 12px;
+}
+
+.hover_bottom {
+    width: 40%;
+    height: 2px;
+    margin: 0.15rem auto;
+    background-color: var(--main-color);
+}
+
+.name_section:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.sections:hover .hover_bottom {
+    background-color: var(--border-color);
+}
+
+.active_border {
+    background-color: var(--border-color);
+}
+
+.active_hover {
+    color: white;
+}
+
+.recently_playlist {
+    padding-top: 2rem;
+}
+
+.playlist_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.playlist {
+    width: 190px;
+}
+
+.playlist img {
+    width: 100%;
+}
+
+
+.playlist h3,
+.playlist h4 {
+    text-align: center;
+    font-size: 10px;
+}
+
+.playlist h3 {
+    color: white;
+    font-size: 13px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.content_menu h2 {
+    color: white;
+    padding-top: 2rem;
+}
+
+.content_menu h4 {
+    font-size: 10px;
 }
 
 /********************************
@@ -230,7 +310,7 @@ FOOTER
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 8%;
     font-size: 1rem;
     height: 50%;
     color: white;
@@ -342,7 +422,7 @@ MOBILE XS
         display: none;
     }
 
-    .playlist {
+    .name_playlist {
         display: none;
     }
 
