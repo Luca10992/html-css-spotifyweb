@@ -299,6 +299,8 @@ FOOTER
 ********************************* */
 
 #footer {
+    position: sticky;
+    z-index: 1;
     height: 80px;
     display: flex;
     justify-content: space-between;
