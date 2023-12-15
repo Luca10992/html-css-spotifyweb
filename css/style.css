@@ -128,7 +128,12 @@ MAIN
 }
 
 .download {
+    cursor: pointer;
     font-size: 13px;
+}
+
+.download:hover {
+    color: white;
 }
 
 hr {
@@ -169,12 +174,17 @@ hr {
 
 
 .btn {
+    cursor: pointer;
     margin-right: 5px;
     background-color: transparent;
     color: white;
     padding: 1rem 3rem;
     border-radius: 25px;
     border: 1px solid white;
+}
+
+.btn:hover {
+    font-size: 14px;
 }
 
 .content_menu {
@@ -227,7 +237,7 @@ hr {
 }
 
 .playlist {
-    width: 190px;
+    width: calc(100% / 6 - 1rem);
 }
 
 .playlist img {
@@ -255,6 +265,33 @@ hr {
 
 .content_menu h4 {
     font-size: 10px;
+}
+
+.img_container {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_container img:hover {
+    filter: brightness(0.5);
+}
+
+.img_container i {
+    display: none;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+}
+
+.img_container:hover .fa-circle-play {
+    display: block;
+}
+
+.popular_artist img {
+    border-radius: 50%;
 }
 
 /********************************
@@ -289,14 +326,24 @@ FOOTER
 }
 
 .subtitle {
+    cursor: pointer;
     color: var(--subtitle-color);
 }
 
+.subtitle:hover {
+    color: white;
+}
+
 .name_icon {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
     color: var(--subtitle-color);
+}
+
+.name_icon div:hover {
+    color: white;
 }
 
 .player {
@@ -318,8 +365,16 @@ FOOTER
     margin-bottom: -10px;
 }
 
+.player_icon i {
+    cursor: pointer;
+}
+
 .fa-circle-play {
     font-size: 2rem;
+}
+
+.player_icon .fa-circle-play:hover {
+    font-size: 2.10rem;
 }
 
 .player_bar {
@@ -338,9 +393,35 @@ FOOTER
     background-color: var(--subtitle-color);
 }
 
+.bar:hover .bar.small,
+.sound_bar:hover .sound_bar.small {
+    background-color: var(--border-color);
+}
+
+.bar:hover .circle {
+    display: block;
+}
+
 .bar.small {
+    position: relative;
     width: 15%;
     background-color: white;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: -2.5px;
+    display: none;
+}
+
+.sound_bar:hover .sound {
+    display: block;
+    bottom: -3.5;
 }
 
 .setting {
@@ -353,6 +434,11 @@ FOOTER
     padding: 1.25rem 0.5rem;
 }
 
+.brightness:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
 .sound_bar {
     width: 100px;
     height: 3px;
@@ -361,9 +447,19 @@ FOOTER
 }
 
 .sound_bar .small {
+    position: relative;
     width: 25px;
     height: 3px;
     background-color: white;
+}
+
+/*********************************
+TABLET L
+**********************************/
+@media screen and (max-width: 878px) {
+    .playlist {
+        width: calc(100% / 4 - 1rem);
+    }
 }
 
 /*********************************
@@ -381,6 +477,10 @@ MOBILE S
     .setting {
         gap: 0.5rem;
     }
+
+    .playlist {
+        width: calc(100% / 2 - 1rem);
+    }
 }
 
 
@@ -388,7 +488,7 @@ MOBILE S
 MOBILE XS
 **********************************/
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 546px) {
     .aside_bar {
         width: 60px;
     }
