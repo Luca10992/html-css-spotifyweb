@@ -400,30 +400,32 @@ FOOTER
     background-color: var(--border-color);
 }
 
-.bar:hover .circle {
-    display: block;
-}
-
 .bar.small {
     position: relative;
     width: 15%;
     background-color: white;
 }
 
-.circle {
-    width: 10px;
+.bar:hover .bar.small::after {
+    content: " ";
     height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    right: 0;
-    bottom: -2.5px;
-    display: none;
+    left: 90%;
+    top: -50%;
 }
 
-.sound_bar:hover .sound {
-    display: block;
-    bottom: -3.5;
+.sound_bar:hover .sound_bar.small::after {
+    content: " ";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 90%;
+    top: -100%;
 }
 
 .setting {
